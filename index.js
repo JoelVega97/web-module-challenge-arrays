@@ -164,10 +164,11 @@ hint - you can use the .includes method to help you solve this */
 function filterByWord(arr, string){
     let chocolateArr = []
     for(let i = 0; i<arr.length; i++){
-        if(arr.includes(string)){
-            return chocolateArr
+        if(arr[i].includes(string)){
+            chocolateArr.push(arr[i])
         }
     }
+    return chocolateArr
 }
 
 console.log(filterByWord(originalFlavors, 'Chocolate'))
